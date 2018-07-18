@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A445F4DD20FFA3C3000F26A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A445F4DC20FFA3C3000F26A3 /* AppDelegate.swift */; };
+		A445F4DF20FFA3C3000F26A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A445F4DE20FFA3C3000F26A3 /* ViewController.swift */; };
+		A445F4E220FFA3C3000F26A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A445F4E020FFA3C3000F26A3 /* Main.storyboard */; };
+		A445F4E520FFA3C3000F26A3 /* Blutzuckertabelle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A445F4E320FFA3C3000F26A3 /* Blutzuckertabelle.xcdatamodeld */; };
+		A445F4E720FFA3C4000F26A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A445F4E620FFA3C4000F26A3 /* Assets.xcassets */; };
+		A445F4EA20FFA3C4000F26A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A445F4E820FFA3C4000F26A3 /* LaunchScreen.storyboard */; };
+		A445F4F520FFA3C4000F26A3 /* BlutzuckertabelleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A445F4F420FFA3C4000F26A3 /* BlutzuckertabelleTests.swift */; };
+		A445F50020FFA3C4000F26A3 /* BlutzuckertabelleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A445F4FF20FFA3C4000F26A3 /* BlutzuckertabelleUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A445F4F120FFA3C4000F26A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A445F4D120FFA3C3000F26A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A445F4D820FFA3C3000F26A3;
+			remoteInfo = Blutzuckertabelle;
+		};
+		A445F4FC20FFA3C4000F26A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A445F4D120FFA3C3000F26A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A445F4D820FFA3C3000F26A3;
+			remoteInfo = Blutzuckertabelle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A445F4D920FFA3C3000F26A3 /* Blutzuckertabelle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blutzuckertabelle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A445F4DC20FFA3C3000F26A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A445F4DE20FFA3C3000F26A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A445F4E120FFA3C3000F26A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A445F4E420FFA3C3000F26A3 /* Blutzuckertabelle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Blutzuckertabelle.xcdatamodel; sourceTree = "<group>"; };
+		A445F4E620FFA3C4000F26A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A445F4E920FFA3C4000F26A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A445F4EB20FFA3C4000F26A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A445F4F020FFA3C4000F26A3 /* BlutzuckertabelleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlutzuckertabelleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A445F4F420FFA3C4000F26A3 /* BlutzuckertabelleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlutzuckertabelleTests.swift; sourceTree = "<group>"; };
+		A445F4F620FFA3C4000F26A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A445F4FB20FFA3C4000F26A3 /* BlutzuckertabelleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlutzuckertabelleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A445F4FF20FFA3C4000F26A3 /* BlutzuckertabelleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlutzuckertabelleUITests.swift; sourceTree = "<group>"; };
+		A445F50120FFA3C4000F26A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A445F4D620FFA3C3000F26A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A445F4ED20FFA3C4000F26A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A445F4F820FFA3C4000F26A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A445F4D020FFA3C3000F26A3 = {
+			isa = PBXGroup;
+			children = (
+				A445F4DB20FFA3C3000F26A3 /* Blutzuckertabelle */,
+				A445F4F320FFA3C4000F26A3 /* BlutzuckertabelleTests */,
+				A445F4FE20FFA3C4000F26A3 /* BlutzuckertabelleUITests */,
+				A445F4DA20FFA3C3000F26A3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A445F4DA20FFA3C3000F26A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A445F4D920FFA3C3000F26A3 /* Blutzuckertabelle.app */,
+				A445F4F020FFA3C4000F26A3 /* BlutzuckertabelleTests.xctest */,
+				A445F4FB20FFA3C4000F26A3 /* BlutzuckertabelleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A445F4DB20FFA3C3000F26A3 /* Blutzuckertabelle */ = {
+			isa = PBXGroup;
+			children = (
+				A445F4DC20FFA3C3000F26A3 /* AppDelegate.swift */,
+				A445F4DE20FFA3C3000F26A3 /* ViewController.swift */,
+				A445F4E020FFA3C3000F26A3 /* Main.storyboard */,
+				A445F4E620FFA3C4000F26A3 /* Assets.xcassets */,
+				A445F4E820FFA3C4000F26A3 /* LaunchScreen.storyboard */,
+				A445F4EB20FFA3C4000F26A3 /* Info.plist */,
+				A445F4E320FFA3C3000F26A3 /* Blutzuckertabelle.xcdatamodeld */,
+			);
+			path = Blutzuckertabelle;
+			sourceTree = "<group>";
+		};
+		A445F4F320FFA3C4000F26A3 /* BlutzuckertabelleTests */ = {
+			isa = PBXGroup;
+			children = (
+				A445F4F420FFA3C4000F26A3 /* BlutzuckertabelleTests.swift */,
+				A445F4F620FFA3C4000F26A3 /* Info.plist */,
+			);
+			path = BlutzuckertabelleTests;
+			sourceTree = "<group>";
+		};
+		A445F4FE20FFA3C4000F26A3 /* BlutzuckertabelleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A445F4FF20FFA3C4000F26A3 /* BlutzuckertabelleUITests.swift */,
+				A445F50120FFA3C4000F26A3 /* Info.plist */,
+			);
+			path = BlutzuckertabelleUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A445F4D820FFA3C3000F26A3 /* Blutzuckertabelle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A445F50420FFA3C4000F26A3 /* Build configuration list for PBXNativeTarget "Blutzuckertabelle" */;
+			buildPhases = (
+				A445F4D520FFA3C3000F26A3 /* Sources */,
+				A445F4D620FFA3C3000F26A3 /* Frameworks */,
+				A445F4D720FFA3C3000F26A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Blutzuckertabelle;
+			productName = Blutzuckertabelle;
+			productReference = A445F4D920FFA3C3000F26A3 /* Blutzuckertabelle.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A445F4EF20FFA3C4000F26A3 /* BlutzuckertabelleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A445F50720FFA3C4000F26A3 /* Build configuration list for PBXNativeTarget "BlutzuckertabelleTests" */;
+			buildPhases = (
+				A445F4EC20FFA3C4000F26A3 /* Sources */,
+				A445F4ED20FFA3C4000F26A3 /* Frameworks */,
+				A445F4EE20FFA3C4000F26A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A445F4F220FFA3C4000F26A3 /* PBXTargetDependency */,
+			);
+			name = BlutzuckertabelleTests;
+			productName = BlutzuckertabelleTests;
+			productReference = A445F4F020FFA3C4000F26A3 /* BlutzuckertabelleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A445F4FA20FFA3C4000F26A3 /* BlutzuckertabelleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A445F50A20FFA3C4000F26A3 /* Build configuration list for PBXNativeTarget "BlutzuckertabelleUITests" */;
+			buildPhases = (
+				A445F4F720FFA3C4000F26A3 /* Sources */,
+				A445F4F820FFA3C4000F26A3 /* Frameworks */,
+				A445F4F920FFA3C4000F26A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A445F4FD20FFA3C4000F26A3 /* PBXTargetDependency */,
+			);
+			name = BlutzuckertabelleUITests;
+			productName = BlutzuckertabelleUITests;
+			productReference = A445F4FB20FFA3C4000F26A3 /* BlutzuckertabelleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A445F4D120FFA3C3000F26A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Webdevs;
+				TargetAttributes = {
+					A445F4D820FFA3C3000F26A3 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					A445F4EF20FFA3C4000F26A3 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = A445F4D820FFA3C3000F26A3;
+					};
+					A445F4FA20FFA3C4000F26A3 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = A445F4D820FFA3C3000F26A3;
+					};
+				};
+			};
+			buildConfigurationList = A445F4D420FFA3C3000F26A3 /* Build configuration list for PBXProject "Blutzuckertabelle" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A445F4D020FFA3C3000F26A3;
+			productRefGroup = A445F4DA20FFA3C3000F26A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A445F4D820FFA3C3000F26A3 /* Blutzuckertabelle */,
+				A445F4EF20FFA3C4000F26A3 /* BlutzuckertabelleTests */,
+				A445F4FA20FFA3C4000F26A3 /* BlutzuckertabelleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A445F4D720FFA3C3000F26A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A445F4EA20FFA3C4000F26A3 /* LaunchScreen.storyboard in Resources */,
+				A445F4E720FFA3C4000F26A3 /* Assets.xcassets in Resources */,
+				A445F4E220FFA3C3000F26A3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A445F4EE20FFA3C4000F26A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A445F4F920FFA3C4000F26A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A445F4D520FFA3C3000F26A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A445F4E520FFA3C3000F26A3 /* Blutzuckertabelle.xcdatamodeld in Sources */,
+				A445F4DF20FFA3C3000F26A3 /* ViewController.swift in Sources */,
+				A445F4DD20FFA3C3000F26A3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A445F4EC20FFA3C4000F26A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A445F4F520FFA3C4000F26A3 /* BlutzuckertabelleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A445F4F720FFA3C4000F26A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A445F50020FFA3C4000F26A3 /* BlutzuckertabelleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A445F4F220FFA3C4000F26A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A445F4D820FFA3C3000F26A3 /* Blutzuckertabelle */;
+			targetProxy = A445F4F120FFA3C4000F26A3 /* PBXContainerItemProxy */;
+		};
+		A445F4FD20FFA3C4000F26A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A445F4D820FFA3C3000F26A3 /* Blutzuckertabelle */;
+			targetProxy = A445F4FC20FFA3C4000F26A3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A445F4E020FFA3C3000F26A3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A445F4E120FFA3C3000F26A3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A445F4E820FFA3C4000F26A3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A445F4E920FFA3C4000F26A3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A445F50220FFA3C4000F26A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A445F50320FFA3C4000F26A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A445F50520FFA3C4000F26A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4M4STYD4GC;
+				INFOPLIST_FILE = Blutzuckertabelle/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = WD.Blutzuckertabelle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A445F50620FFA3C4000F26A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4M4STYD4GC;
+				INFOPLIST_FILE = Blutzuckertabelle/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = WD.Blutzuckertabelle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A445F50820FFA3C4000F26A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4M4STYD4GC;
+				INFOPLIST_FILE = BlutzuckertabelleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = WD.BlutzuckertabelleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blutzuckertabelle.app/Blutzuckertabelle";
+			};
+			name = Debug;
+		};
+		A445F50920FFA3C4000F26A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4M4STYD4GC;
+				INFOPLIST_FILE = BlutzuckertabelleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = WD.BlutzuckertabelleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blutzuckertabelle.app/Blutzuckertabelle";
+			};
+			name = Release;
+		};
+		A445F50B20FFA3C4000F26A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4M4STYD4GC;
+				INFOPLIST_FILE = BlutzuckertabelleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = WD.BlutzuckertabelleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Blutzuckertabelle;
+			};
+			name = Debug;
+		};
+		A445F50C20FFA3C4000F26A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4M4STYD4GC;
+				INFOPLIST_FILE = BlutzuckertabelleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = WD.BlutzuckertabelleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Blutzuckertabelle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A445F4D420FFA3C3000F26A3 /* Build configuration list for PBXProject "Blutzuckertabelle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A445F50220FFA3C4000F26A3 /* Debug */,
+				A445F50320FFA3C4000F26A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A445F50420FFA3C4000F26A3 /* Build configuration list for PBXNativeTarget "Blutzuckertabelle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A445F50520FFA3C4000F26A3 /* Debug */,
+				A445F50620FFA3C4000F26A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A445F50720FFA3C4000F26A3 /* Build configuration list for PBXNativeTarget "BlutzuckertabelleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A445F50820FFA3C4000F26A3 /* Debug */,
+				A445F50920FFA3C4000F26A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A445F50A20FFA3C4000F26A3 /* Build configuration list for PBXNativeTarget "BlutzuckertabelleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A445F50B20FFA3C4000F26A3 /* Debug */,
+				A445F50C20FFA3C4000F26A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A445F4E320FFA3C3000F26A3 /* Blutzuckertabelle.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A445F4E420FFA3C3000F26A3 /* Blutzuckertabelle.xcdatamodel */,
+			);
+			currentVersion = A445F4E420FFA3C3000F26A3 /* Blutzuckertabelle.xcdatamodel */;
+			path = Blutzuckertabelle.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A445F4D120FFA3C3000F26A3 /* Project object */;
+}
