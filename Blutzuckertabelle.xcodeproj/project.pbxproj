@@ -15,6 +15,9 @@
 		A445F4EA20FFA3C4000F26A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A445F4E820FFA3C4000F26A3 /* LaunchScreen.storyboard */; };
 		A445F4F520FFA3C4000F26A3 /* BlutzuckertabelleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A445F4F420FFA3C4000F26A3 /* BlutzuckertabelleTests.swift */; };
 		A445F50020FFA3C4000F26A3 /* BlutzuckertabelleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A445F4FF20FFA3C4000F26A3 /* BlutzuckertabelleUITests.swift */; };
+		A449BB4A210062AD00C70BC1 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = A449BB47210062AD00C70BC1 /* Icon-120.png */; };
+		A449BB4B210062AD00C70BC1 /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = A449BB48210062AD00C70BC1 /* Icon-60.png */; };
+		A449BB4C210062AD00C70BC1 /* Icon-180.png in Resources */ = {isa = PBXBuildFile; fileRef = A449BB49210062AD00C70BC1 /* Icon-180.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		A445F4FB20FFA3C4000F26A3 /* BlutzuckertabelleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlutzuckertabelleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A445F4FF20FFA3C4000F26A3 /* BlutzuckertabelleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlutzuckertabelleUITests.swift; sourceTree = "<group>"; };
 		A445F50120FFA3C4000F26A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A449BB47210062AD00C70BC1 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-120.png"; path = "Assets.xcassets/Content.imageset/Icon-120.png"; sourceTree = "<group>"; };
+		A449BB48210062AD00C70BC1 /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60.png"; path = "Assets.xcassets/Content.imageset/Icon-60.png"; sourceTree = "<group>"; };
+		A449BB49210062AD00C70BC1 /* Icon-180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-180.png"; path = "Assets.xcassets/Content.imageset/Icon-180.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,9 @@
 		A445F4DB20FFA3C3000F26A3 /* Blutzuckertabelle */ = {
 			isa = PBXGroup;
 			children = (
+				A449BB48210062AD00C70BC1 /* Icon-60.png */,
+				A449BB47210062AD00C70BC1 /* Icon-120.png */,
+				A449BB49210062AD00C70BC1 /* Icon-180.png */,
 				A445F4DC20FFA3C3000F26A3 /* AppDelegate.swift */,
 				A445F4DE20FFA3C3000F26A3 /* ViewController.swift */,
 				A445F4E020FFA3C3000F26A3 /* Main.storyboard */,
@@ -232,8 +241,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A449BB4B210062AD00C70BC1 /* Icon-60.png in Resources */,
+				A449BB4A210062AD00C70BC1 /* Icon-120.png in Resources */,
 				A445F4EA20FFA3C4000F26A3 /* LaunchScreen.storyboard in Resources */,
 				A445F4E720FFA3C4000F26A3 /* Assets.xcassets in Resources */,
+				A449BB4C210062AD00C70BC1 /* Icon-180.png in Resources */,
 				A445F4E220FFA3C3000F26A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
