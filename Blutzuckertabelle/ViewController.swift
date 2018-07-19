@@ -8,40 +8,50 @@
 
 import UIKit
 
+
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     @IBOutlet weak var segmetControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
+    
+    private var morning_data: [[String : String]] = []
+    private var midday_data: [[String : String]] = []
+    private var evening_data: [[String : String]] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         
-        /*private var morning_data: [[String:String]] = []
+      
         morning_data = [
-            "unter 5" : "4",
-            "5.0-8.0" : "8"
+            ["blood_sugar_level" : "unter 5" , "insulin_level" : "4"],
+            ["blood_sugar_level" : "5.0-8.0" , "insulin_level" : "8"],
+            ["blood_sugar_level" : "8.1-12.0" , "insulin_level" : "10"],
+            ["blood_sugar_level" : "12.1-15.0" , "insulin_level" : "12"],
+            ["blood_sugar_level" : "15.1-20" , "insulin_level" : "14"],
+            ["blood_sugar_level" : "über 20" , "insulin_level" : "16"]
         ]
-        */
+        midday_data = [
+            ["blood_sugar_level" : "unter 5" , "insulin_level" : "8"],
+            ["blood_sugar_level" : "5.0-8.0" , "insulin_level" : "12"],
+            ["blood_sugar_level" : "8.1-12.0" , "insulin_level" : "14"],
+            ["blood_sugar_level" : "12.1-15.0" , "insulin_level" : "16"],
+            ["blood_sugar_level" : "15.1-20" , "insulin_level" : "18"],
+            ["blood_sugar_level" : "über 20" , "insulin_level" : "20"]
+        ]
+        evening_data = [
+            ["blood_sugar_level" : "unter 5" , "insulin_level" : "8"],
+            ["blood_sugar_level" : "5.0-8.0" , "insulin_level" : "10"],
+            ["blood_sugar_level" : "8.1-12.0" , "insulin_level" : "12"],
+            ["blood_sugar_level" : "12.1-15.0" , "insulin_level" : "14"],
+            ["blood_sugar_level" : "15.1-20" , "insulin_level" : "16"],
+            ["blood_sugar_level" : "über 20" , "insulin_level" : "18"]
+        ]
+        
     }
     
-   /* let morningArray =
-        ["unter 5" : "4",
-         "5.0-8.0" : "8",
-         "8.1-12.0" : "10",
-         "12.1-15.0" : "12",
-         "15.1-20" : "14",
-         "über 20" : "16"
-    ]*/
-    
     let sections = ["Morgens", "Mittags", "Abends"]
-    let tableMorning = ["unter 5", "5.0-8.0", "8.1-12.0","12.1-15.0","15.1-20","über 20"]
-    let morningIndex = ["4", "8", "10","12","14","16"]
-    let tableLunch = ["unter 5", "5.0-8.0", "8.1-12.0","12.1-15.0","15.1-20","über 20"]
-    let lunchIndex = ["8", "12", "14","16","18","20"]
-    let tableEvening = ["unter 5", "5.0-8.0", "8.1-12.0","12.1-15.0","15.1-20","über 20"]
-    let eveningIndex = ["8", "10", "12","14","16","18"]
-    
     
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -55,37 +65,31 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return tableMorning.count
+            return morning_data.count
         case 1:
-            return tableLunch.count
+            return midday_data.count
         case 2:
-            return tableEvening.count
+            return evening_data.count
         default:
             return 0
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Create an object of the dynamic cell "PlainCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath)
         
-        
-        // Depending on the section, fill the textLabel with the relevant text
         switch indexPath.section {
         case 0:
-            // Fruit Section
-            cell.textLabel?.text = tableMorning[indexPath.row]
-            cell.detailTextLabel?.text = morningIndex[indexPath.row]
+            cell.textLabel?.text = morning_data[indexPath.row]["blood_sugar_level"]
+            cell.detailTextLabel?.text = morning_data[indexPath.row]["insulin_level"]
             break
         case 1:
-            // Vegetable Section
-            cell.textLabel?.text = tableLunch[indexPath.row]
-            cell.detailTextLabel?.text = lunchIndex[indexPath.row]
+            cell.textLabel?.text = midday_data[indexPath.row]["blood_sugar_level"]
+            cell.detailTextLabel?.text = midday_data[indexPath.row]["insulin_level"]
             break
         case 2:
-            // Evening Section
-            cell.textLabel?.text = tableEvening[indexPath.row]
-            cell.detailTextLabel?.text = eveningIndex[indexPath.row]
+            cell.textLabel?.text = evening_data[indexPath.row]["blood_sugar_level"]
+            cell.detailTextLabel?.text = evening_data[indexPath.row]["insulin_level"]
             break
         default:
             break
