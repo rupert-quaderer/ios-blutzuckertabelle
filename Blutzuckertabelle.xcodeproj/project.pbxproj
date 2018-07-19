@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A42B21A02100C88E00BA49DD /* SelectableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42B219F2100C88E00BA49DD /* SelectableTableViewCell.swift */; };
 		A445F4DD20FFA3C3000F26A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A445F4DC20FFA3C3000F26A3 /* AppDelegate.swift */; };
 		A445F4DF20FFA3C3000F26A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A445F4DE20FFA3C3000F26A3 /* ViewController.swift */; };
 		A445F4E220FFA3C3000F26A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A445F4E020FFA3C3000F26A3 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A42B219F2100C88E00BA49DD /* SelectableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableTableViewCell.swift; sourceTree = "<group>"; };
 		A445F4D920FFA3C3000F26A3 /* Blutzuckertabelle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blutzuckertabelle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A445F4DC20FFA3C3000F26A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A445F4DE20FFA3C3000F26A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				A445F4E820FFA3C4000F26A3 /* LaunchScreen.storyboard */,
 				A445F4EB20FFA3C4000F26A3 /* Info.plist */,
 				A445F4E320FFA3C3000F26A3 /* Blutzuckertabelle.xcdatamodeld */,
+				A42B219F2100C88E00BA49DD /* SelectableTableViewCell.swift */,
 			);
 			path = Blutzuckertabelle;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				A445F4E520FFA3C3000F26A3 /* Blutzuckertabelle.xcdatamodeld in Sources */,
 				A445F4DF20FFA3C3000F26A3 /* ViewController.swift in Sources */,
 				A445F4DD20FFA3C3000F26A3 /* AppDelegate.swift in Sources */,
+				A42B21A02100C88E00BA49DD /* SelectableTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

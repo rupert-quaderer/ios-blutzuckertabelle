@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     @IBOutlet weak var segmetControl: UISegmentedControl!
@@ -19,6 +17,12 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         tableView.delegate = self
         tableView.dataSource = self
         
+        /*private var morning_data: [[String:String]] = []
+        morning_data = [
+            "unter 5" : "4",
+            "5.0-8.0" : "8"
+        ]
+        */
     }
     
    /* let morningArray =
@@ -30,7 +34,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
          "über 20" : "16"
     ]*/
     
-    let sections = ["Morgen", "Mittag", "Abend"]
+    let sections = ["Morgens", "Mittags", "Abends"]
     let tableMorning = ["unter 5", "5.0-8.0", "8.1-12.0","12.1-15.0","15.1-20","über 20"]
     let morningIndex = ["4", "8", "10","12","14","16"]
     let tableLunch = ["unter 5", "5.0-8.0", "8.1-12.0","12.1-15.0","15.1-20","über 20"]
@@ -38,7 +42,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     let tableEvening = ["unter 5", "5.0-8.0", "8.1-12.0","12.1-15.0","15.1-20","über 20"]
     let eveningIndex = ["8", "10", "12","14","16","18"]
     
-    // MARK: UITableViewDataSource
+    
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return sections[section]
@@ -64,6 +68,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Create an object of the dynamic cell "PlainCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath)
+        
+        
         // Depending on the section, fill the textLabel with the relevant text
         switch indexPath.section {
         case 0:
