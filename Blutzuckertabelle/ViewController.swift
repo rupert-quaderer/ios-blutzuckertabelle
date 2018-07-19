@@ -13,6 +13,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 
     @IBOutlet weak var segmetControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var SegmentLabel: UILabel!
     
     private var morning_data: [[String : String]] = []
     private var midday_data: [[String : String]] = []
@@ -22,8 +23,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
-      
+        SegmentLabel.text = segmetControl.titleForSegment(at: segmetControl.selectedSegmentIndex)
+    
         morning_data = [
             ["blood_sugar_level" : "unter 5" , "insulin_level" : "4"],
             ["blood_sugar_level" : "5.0-8.0" , "insulin_level" : "8"],
@@ -51,19 +52,20 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
     }
     
-    let sections = ["Morgens", "Mittags", "Abends"]
     
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sections[section]
+    @IBAction func indexChanged(_ sender: UISegmentedControl) {
+        SegmentLabel.text = segmetControl.titleForSegment(at: segmetControl.selectedSegmentIndex)
+        tableView.reloadData()
     }
     
+
     func numberOfSections(in tableView: UITableView) -> Int {
-        return sections.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
+       
+        switch segmetControl.selectedSegmentIndex {
         case 0:
             return morning_data.count
         case 1:
@@ -78,7 +80,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath)
         
-        switch indexPath.section {
+        switch segmetControl.selectedSegmentIndex {
         case 0:
             cell.textLabel?.text = morning_data[indexPath.row]["blood_sugar_level"]
             cell.detailTextLabel?.text = morning_data[indexPath.row]["insulin_level"]
@@ -92,10 +94,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             cell.detailTextLabel?.text = evening_data[indexPath.row]["insulin_level"]
             break
         default:
-            break
+            return cell
+        }
+        return cell
     }
-    
-    // Return the configured cell
-    return cell
-    }
+   
 }
