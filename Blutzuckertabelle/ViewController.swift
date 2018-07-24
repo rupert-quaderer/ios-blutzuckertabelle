@@ -7,10 +7,10 @@
 //
 
 import UIKit
+import CoreBluetooth
 
-
-class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
-
+class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,CBCentralManagerDelegate,CBPeripheralDelegate {
+    
     @IBOutlet weak var segmetControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var SegmentLabel: UILabel!
@@ -19,12 +19,19 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     private var midday_data: [[String : String]] = []
     private var evening_data: [[String : String]] = []
     
+    var bluetoothManager:CBCentralManager!
+    var glucosePeripheral:CBPeripheral!
+    
+    let glucoseCBUUID = CBUUID(string: "0x1808")
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         SegmentLabel.text = segmetControl.titleForSegment(at: segmetControl.selectedSegmentIndex)
-    
+        bluetoothManager = CBCentralManager(delegate: self, queue: nil)
+
         morning_data = [
             ["blood_sugar_level" : "unter 5" , "insulin_level" : "4"],
             ["blood_sugar_level" : "5.0-8.0" , "insulin_level" : "8"],
@@ -51,6 +58,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         ]
         
     }
+    
     
     
     @IBAction func indexChanged(_ sender: UISegmentedControl) {
@@ -98,5 +106,29 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         }
         return cell
     }
+    
+    func centralManagerDidUpdateState(_ central: CBCentralManager) {
+        if central.state == CBManagerState.poweredOn {
+            central.scanForPeripherals(withServices:[glucoseCBUUID])
+            print("BT an")
+            
+        } else {
+            print("Bluetooth not available.")
+        }
+    }
+    func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
+        print(peripheral)
+        glucosePeripheral = peripheral
+        bluetoothManager.stopScan()
+        bluetoothManager.connect(glucosePeripheral)
+        
+    }
+    
+    func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
+        print("verbundne")
+        print(peripheral)
+    }
+    
+
    
 }
