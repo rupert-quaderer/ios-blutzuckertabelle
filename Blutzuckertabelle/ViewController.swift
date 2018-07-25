@@ -13,7 +13,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     @IBOutlet weak var segmetControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var SegmentLabel: UILabel!
+    @IBOutlet weak var viewTitleLabel: UILabel!
     
     private var morning_data: [[String : String]] = []
     private var midday_data: [[String : String]] = []
@@ -29,7 +29,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        SegmentLabel.text = segmetControl.titleForSegment(at: segmetControl.selectedSegmentIndex)
+        viewTitleLabel.text = segmetControl.titleForSegment(at: segmetControl.selectedSegmentIndex)
         bluetoothManager = CBCentralManager(delegate: self, queue: nil)
 
         morning_data = [
@@ -62,7 +62,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     
     @IBAction func indexChanged(_ sender: UISegmentedControl) {
-        SegmentLabel.text = segmetControl.titleForSegment(at: segmetControl.selectedSegmentIndex)
+        viewTitleLabel.text = segmetControl.titleForSegment(at: segmetControl.selectedSegmentIndex)
         tableView.reloadData()
     }
     

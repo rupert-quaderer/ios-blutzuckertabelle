@@ -98,9 +98,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="SegmentLabel" destination="M1R-8A-sdh" id="5gn-a0-g9C"/>
                         <outlet property="segmetControl" destination="Wzk-E3-REq" id="Nbx-8H-xay"/>
                         <outlet property="tableView" destination="uJh-Ct-oqW" id="L8n-jp-oxn"/>
+                        <outlet property="viewTitleLabel" destination="M1R-8A-sdh" id="gcx-zw-7sn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
