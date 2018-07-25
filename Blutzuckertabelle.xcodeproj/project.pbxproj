@@ -19,7 +19,6 @@
 		A449BB4A210062AD00C70BC1 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = A449BB47210062AD00C70BC1 /* Icon-120.png */; };
 		A449BB4B210062AD00C70BC1 /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = A449BB48210062AD00C70BC1 /* Icon-60.png */; };
 		A449BB4C210062AD00C70BC1 /* Icon-180.png in Resources */ = {isa = PBXBuildFile; fileRef = A449BB49210062AD00C70BC1 /* Icon-180.png */; };
-		A47B56402101B1C90049BDE2 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A47B563F2101B1C90049BDE2 /* GameKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +57,6 @@
 		A449BB47210062AD00C70BC1 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-120.png"; path = "Assets.xcassets/Content.imageset/Icon-120.png"; sourceTree = "<group>"; };
 		A449BB48210062AD00C70BC1 /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60.png"; path = "Assets.xcassets/Content.imageset/Icon-60.png"; sourceTree = "<group>"; };
 		A449BB49210062AD00C70BC1 /* Icon-180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-180.png"; path = "Assets.xcassets/Content.imageset/Icon-180.png"; sourceTree = "<group>"; };
-		A47B563F2101B1C90049BDE2 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +64,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A47B56402101B1C90049BDE2 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +144,6 @@
 		A47B563E2101B1C90049BDE2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A47B563F2101B1C90049BDE2 /* GameKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -222,7 +218,7 @@
 						CreatedOnToolsVersion = 9.4.1;
 						SystemCapabilities = {
 							com.apple.GameCenter.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -475,7 +471,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = WD.Blutzuckertabelle;
+				PRODUCT_BUNDLE_IDENTIFIER = li.webdevs.insulinschema;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -495,7 +491,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = WD.Blutzuckertabelle;
+				PRODUCT_BUNDLE_IDENTIFIER = li.webdevs.insulinschema;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;

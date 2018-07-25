@@ -25,6 +25,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     let glucoseCBUUID = CBUUID(string: "0x1808")
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
