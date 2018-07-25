@@ -27,10 +27,15 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     //date time
     let date = Date()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //save state
+        self.restorationIdentifier = "HomeVC"
+        
         tableView.delegate = self
         tableView.dataSource = self
+      
         viewTitleLabel.text = segmetControl.titleForSegment(at: segmetControl.selectedSegmentIndex)
         bluetoothManager = CBCentralManager(delegate: self, queue: nil)
         let hour = Calendar.current.component(.hour, from: date)
@@ -38,13 +43,14 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         switch hour {
             case 6..<12 :
                  segmetControl.selectedSegmentIndex = 0
-            case 12 :
-                 segmetControl.selectedSegmentIndex = 1
-            case 13..<24 :
+            case 12..<14 :
+                segmetControl.selectedSegmentIndex = 1
+            case 14..<24 :
                 segmetControl.selectedSegmentIndex = 2
             default:
                 segmetControl.selectedSegmentIndex = 0
-        }        
+        }
+        
         viewTitleLabel.text = segmetControl.titleForSegment(at: segmetControl.selectedSegmentIndex)
         
         morning_data = [
@@ -121,13 +127,25 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let indexPath = tableView.indexPathForSelectedRow
+        let currentCell = tableView.cellForRow(at: indexPath!)! as UITableViewCell
+        let currentItem = currentCell.detailTextLabel!.text
+        let alert = UIAlertController(title: "My Alert", message: "du hast " + currentItem!, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+        }))
+        //self.present(alert, animated: true, completion: nil)
+    }
+    
+    
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         if central.state == CBManagerState.poweredOn {
             central.scanForPeripherals(withServices:[glucoseCBUUID])
-            print("BT an")
+            //print("BT an")
             
         } else {
-            print("Bluetooth not available.")
+            //print("Bluetooth not available.")
         }
     }
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
@@ -139,10 +157,28 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
-        print("verbundne")
-        print(peripheral)
+        //print("verbundne")
+        //print(peripheral)
     }
     
+    
+}
 
-   
+extension ViewController{
+    
+    override func encodeRestorableState(with coder: NSCoder) {
+        super.encodeRestorableState(with: coder)
+        coder.encode(self.tableView,forKey: "tableViewID")
+        //print("tableView encode")
+    }
+    
+    override func decodeRestorableState(with coder: NSCoder) {
+        super.decodeRestorableState(with: coder)
+        coder.decodeObject(forKey: "tableViewID")
+        // print("tableView decode")
+    }
+    override func applicationFinishedRestoringState() {
+        //print("tableView finished restoring")
+        self.tableView.reloadData()
+    }
 }
