@@ -38,10 +38,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         tableView.dataSource = self
       
         viewTitleLabel.text = segmetControl.titleForSegment(at: segmetControl.selectedSegmentIndex)
-
-        let newIndex = IndexPath(row:defaults.integer(forKey: "selectedRow"), section: 0)
-        tableView.selectRow(at: newIndex, animated: false, scrollPosition: .none)
-        
+     
         
         bluetoothManager = CBCentralManager(delegate: self, queue: nil)
         let hour = Calendar.current.component(.hour, from: date)
@@ -134,7 +131,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        defaults.set(indexPath.row,forKey: "selectedRow")
+        defaults.set(indexPath,forKey: "selectedRow")
 
     }
     
