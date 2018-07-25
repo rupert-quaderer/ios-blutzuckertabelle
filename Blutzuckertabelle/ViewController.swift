@@ -23,6 +23,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     var glucosePeripheral:CBPeripheral!
     
     let glucoseCBUUID = CBUUID(string: "0x1808")
+    let defaults = UserDefaults.standard
     
     //date time
     let date = Date()
@@ -37,6 +38,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         tableView.dataSource = self
       
         viewTitleLabel.text = segmetControl.titleForSegment(at: segmetControl.selectedSegmentIndex)
+
+        let newIndex = IndexPath(row:defaults.integer(forKey: "selectedRow"), section: 0)
+        tableView.selectRow(at: newIndex, animated: false, scrollPosition: .none)
+        
+        
         bluetoothManager = CBCentralManager(delegate: self, queue: nil)
         let hour = Calendar.current.component(.hour, from: date)
         
@@ -128,14 +134,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let indexPath = tableView.indexPathForSelectedRow
-        let currentCell = tableView.cellForRow(at: indexPath!)! as UITableViewCell
-        let currentItem = currentCell.detailTextLabel!.text
-        let alert = UIAlertController(title: "My Alert", message: "du hast " + currentItem!, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-            NSLog("The \"OK\" alert occured.")
-        }))
-        //self.present(alert, animated: true, completion: nil)
+        defaults.set(indexPath.row,forKey: "selectedRow")
+
     }
     
     
@@ -164,21 +164,23 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
 }
 
-extension ViewController{
+/*extension ViewController{
     
     override func encodeRestorableState(with coder: NSCoder) {
         super.encodeRestorableState(with: coder)
-        coder.encode(self.tableView,forKey: "tableViewID")
+        coder.encode(self.tableView,forKey: "HomeVC")
         //print("tableView encode")
     }
     
     override func decodeRestorableState(with coder: NSCoder) {
         super.decodeRestorableState(with: coder)
-        coder.decodeObject(forKey: "tableViewID")
-        // print("tableView decode")
+        coder.decodeObject(forKey: "HomeVC")
+        //print("tableView decode")
     }
     override func applicationFinishedRestoringState() {
         //print("tableView finished restoring")
         self.tableView.reloadData()
     }
-}
+}*/
+
+
