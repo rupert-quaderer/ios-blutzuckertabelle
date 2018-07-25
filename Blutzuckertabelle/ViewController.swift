@@ -23,6 +23,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     var glucosePeripheral:CBPeripheral!
     
     let glucoseCBUUID = CBUUID(string: "0x1808")
+    let glucoseMeasurementCBUUID = CBUUID(string: "2A18")
+    
     let defaults = UserDefaults.standard
     
     //date time
@@ -139,25 +141,79 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         if central.state == CBManagerState.poweredOn {
             central.scanForPeripherals(withServices:[glucoseCBUUID])
-            //print("BT an")
+            print("BT an")
             
         } else {
             //print("Bluetooth not available.")
         }
     }
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        print(peripheral)
+       // print(peripheral)
         glucosePeripheral = peripheral
+        glucosePeripheral.delegate = self
         bluetoothManager.stopScan()
         bluetoothManager.connect(glucosePeripheral)
         
     }
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
-        //print("verbundne")
-        //print(peripheral)
+        print("verbunden")
+        peripheral.discoverServices([glucoseCBUUID])
+        
     }
     
+    func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
+        guard let services = peripheral.services else { return }
+        
+        for service in services {
+           peripheral.discoverCharacteristics(nil, for: service)
+        }
+    }
+    
+    func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
+        guard let characteristics = service.characteristics else { return }
+        
+        for characteristic in characteristics {
+           //print(characteristic.properties)
+            
+            if characteristic.properties.contains(.read) {
+                //print("Read: \(characteristic.uuid)")
+                peripheral.readValue(for: characteristic)
+            }
+            
+            if characteristic.properties.contains(.notify) {
+                print("Notify: \(characteristic.uuid)")
+                peripheral.setNotifyValue(true, for: characteristic)
+            }
+        }
+    }
+    
+    func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
+        
+        switch characteristic.uuid {
+        case glucoseMeasurementCBUUID:
+           glucoseLevel(from: characteristic)
+        default:
+          break
+        }
+    }
+    
+    func glucoseLevel(from characteristic: CBCharacteristic) -> Float {
+        guard let data = characteristic.value else { return -1 }
+        let byteArray = [UInt8](data)
+        let glucoseType = byteArray[0] & 0x02
+        print(byteArray)
+        print(byteArray[0 & 0x02])
+        
+        if glucoseType == 0 {
+            print("kg/L")
+        }
+        if glucoseType == 1 {
+            print("mol/L")
+        }
+
+        return 0
+    }
     
 }
 
