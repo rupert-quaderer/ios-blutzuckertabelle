@@ -24,7 +24,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     let glucoseCBUUID = CBUUID(string: "0x1808")
     
-    
+    //date time
+    let date = Date()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,20 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         tableView.dataSource = self
         viewTitleLabel.text = segmetControl.titleForSegment(at: segmetControl.selectedSegmentIndex)
         bluetoothManager = CBCentralManager(delegate: self, queue: nil)
-
+        let hour = Calendar.current.component(.hour, from: date)
+        
+        switch hour {
+            case 6..<12 :
+                 segmetControl.selectedSegmentIndex = 0
+            case 12 :
+                 segmetControl.selectedSegmentIndex = 1
+            case 13..<24 :
+                segmetControl.selectedSegmentIndex = 2
+            default:
+                segmetControl.selectedSegmentIndex = 0
+        }        
+        viewTitleLabel.text = segmetControl.titleForSegment(at: segmetControl.selectedSegmentIndex)
+        
         morning_data = [
             ["blood_sugar_level" : "unter 5" , "insulin_level" : "4"],
             ["blood_sugar_level" : "5.0-8.0" , "insulin_level" : "8"],
@@ -67,7 +81,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         tableView.reloadData()
     }
     
-
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
