@@ -133,7 +133,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        defaults.set(indexPath,forKey: "selectedRow")
+        //defaults.set(indexPath,forKey: "selectedRow")
 
     }
     
@@ -189,10 +189,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        
         switch characteristic.uuid {
         case glucoseMeasurementCBUUID:
-           glucoseLevel(from: characteristic)
+            glucoseLevel(from: characteristic)
         default:
           break
         }
@@ -201,18 +200,27 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func glucoseLevel(from characteristic: CBCharacteristic) -> Float {
         guard let data = characteristic.value else { return -1 }
         let byteArray = [UInt8](data)
-        let glucoseType = byteArray[0] & 0x02
-        print(byteArray)
-        print(byteArray[0 & 0x02])
+        let glucoseType = (byteArray[0] >> 2) & 0x01
+        let glucoseLocationPresent = (byteArray[0] >> 1) & 0x01
         
+        //Zuckerwert: 7.3
+        //[7, 10, 5, 226, 7, 7, 27, 12, 50, 59, 117, 0, 73, 192, 241]
+        //byteArray[12] = 73
+        //byteArray[13] = 192
+        print(byteArray)
+        print(glucoseLocationPresent)
         if glucoseType == 0 {
             print("kg/L")
-        }
-        if glucoseType == 1 {
+            return Float(byteArray[12])
+        } else {
             print("mol/L")
+            print(glucoseLocationPresent)
+            let sfloat = UnsafePointer([byteArray[12],byteArray[13]]).withMemoryRebound(to: UInt16.self, capacity: 1) { $0.pointee }
+            print(byteArray[12])
+            print(byteArray[13])
+           // print(sfloat)
+            return Float(sfloat)
         }
-
-        return 0
     }
     
 }

@@ -82,14 +82,22 @@
                                 </constraints>
                                 <state key="normal" image="Icon Settings"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="glucoseValueLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAf-Q0-cK3">
+                                <rect key="frame" x="205" y="36" width="99" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.094117647058823528" green="0.10196078431372549" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="nAf-Q0-cK3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="1OC-gT-rM5"/>
                             <constraint firstItem="uJh-Ct-oqW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="6QA-rh-KKi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wzk-E3-REq" secondAttribute="trailing" constant="16" id="73c-iT-8HO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M1R-8A-sdh" secondAttribute="trailing" constant="16" id="FPm-F8-k3D"/>
                             <constraint firstItem="M1R-8A-sdh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="HKU-2t-tJV"/>
+                            <constraint firstItem="TyI-gk-ees" firstAttribute="leading" secondItem="nAf-Q0-cK3" secondAttribute="trailing" constant="25" id="K6k-Ci-Y3I"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TyI-gk-ees" secondAttribute="trailing" constant="16" id="SUU-Cw-jdb"/>
                             <constraint firstItem="uJh-Ct-oqW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="au0-tj-fj4"/>
                             <constraint firstItem="uJh-Ct-oqW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="e4r-VF-vSz"/>
@@ -97,6 +105,7 @@
                             <constraint firstItem="TyI-gk-ees" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="ghw-e3-ba9"/>
                             <constraint firstItem="Wzk-E3-REq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="hpc-Wo-FDv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Wzk-E3-REq" secondAttribute="bottom" constant="16" id="m3t-Hk-yhN"/>
+                            <constraint firstItem="nAf-Q0-cK3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="205" id="xJW-vC-bIF"/>
                             <constraint firstItem="M1R-8A-sdh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="y2Q-5W-FWT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -112,6 +121,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CuY-cl-3tf">
+            <objects>
+                <viewController id="OBQ-gU-wrR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xDD-bF-VNR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="xqh-HU-EX0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vYi-vX-Dxf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>
